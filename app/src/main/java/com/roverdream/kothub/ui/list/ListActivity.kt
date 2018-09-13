@@ -12,6 +12,7 @@ import com.roverdream.kothub.databinding.ActivityListBinding
 import com.roverdream.kothub.extensions.isVisible
 import com.roverdream.kothub.extensions.showSnackbar
 import com.roverdream.kothub.ui.base.ViewModelActivity
+import com.roverdream.kothub.ui.detail.DetailActivity
 import com.roverdream.kothub.ui.misc.SimpleDividerItemDecoration
 import com.roverdream.kothub7.AppComponent
 import io.reactivex.disposables.CompositeDisposable
@@ -91,7 +92,7 @@ class ListActivity : ViewModelActivity<ListViewModel, ActivityListBinding>() {
     }
 
     private fun onItemClick(repo: Repo) {
-
+        startActivity(DetailActivity.newIntent(this, repo))
     }
 
     private fun updateList(repos: List<Repo>) {

@@ -4,6 +4,8 @@ import com.roverdream.kothub.App
 import com.roverdream.kothub.AppModule
 import com.roverdream.kothub.data.network.NetworkModule
 import com.roverdream.kothub.data.remote.ApiModule
+import com.roverdream.kothub.ui.detail.DetailComponent
+import com.roverdream.kothub.ui.detail.DetailModule
 import com.roverdream.kothub.ui.list.ListComponent
 import com.roverdream.kothub.ui.list.ListModule
 import dagger.Component
@@ -22,4 +24,5 @@ interface AppComponent {
     fun injectTo(app: App)
 
     fun plus(module: ListModule): ListComponent
+    fun plus(module: DetailModule): DetailComponent
 }
