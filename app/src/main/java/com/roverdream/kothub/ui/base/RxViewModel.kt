@@ -27,6 +27,7 @@ abstract class RxViewModel : AbstractViewModel() {
     override fun onDestroy() {
         super.onDestroy()
         viewState.onComplete()
+        clearSubscriptions()
     }
 
     private fun clearSubscriptions() {
